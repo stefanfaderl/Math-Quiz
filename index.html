@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathquiz</title>
+    <link rel="stylesheet" href="style.css">
+    <img src="img/cheers.jpg" alt="cheers">
+</head>
+
+<body>
+    <h1 id="scoreOfPlayer">Your score: 0 points</h1>
+    <h3 id="pressPlay">Press Start Game</h3>
+
+    <article class="container">
+        <section id="lvl1" class="box">Level 1</section>
+        <section id="lvl2" class="box">Level 2</section>
+        <section id="lvl3" class="box">Level 3</section>
+        <section id="lvl4" class="box">Level 4</section>
+        <section id="lvl5" class="box">Level 5</section>
+        <section id="lvl6" class="box">Level 6</section>
+        <section id="lvl7" class="box">Level 7</section>
+        <section id="lvl8" class="box">Level 8</section>
+        <section id="lvl9" class="box">Level 9</section>
+    </article>
+    <h3 id="finished"></h3>
+    <h4 id="finished2"></h4>
+
+    <article class="container2">
+        <section class="box2">
+            <h2 id="calc-el"></h2>
+            <form><input id="userInput" placeholder="Result?"></input></form>
+            <form><button id="btnEnter" onclick="checkAnswer()" type="button">Submit</button></form>
+        </section>
+    </article>
+    <button onclick="startGame()" type="button">START GAME</button>
+    <button id="restartGame" onclick="restartGame()" type="button">RESTART GAME</button>
+    <!-- <button onclick="deleteLocalStorage()" type="button">'clear local storage'</button> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
