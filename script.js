@@ -28,7 +28,7 @@ function restartGame() {
 /* if button enter were clicked, check answer */
 function checkAnswer() {
   let userInput = $("#userInput").val();
-  console.log(userInput);
+  // console.log(userInput);
   if (userInput == answer) {
     score++;
     $("#lvl" + score).addClass("green");
@@ -94,19 +94,19 @@ function startGame() {
       case 0:
         $("#calc-el").text("How much is " + fNumber + " + " + sNumber + "?");
         answer = fNumber + sNumber; // add fourth number if required in the parameter
-        console.log(fNumber, secondNumber, answer);
+        // console.log(fNumber, secondNumber, answer);
         return answer;
         break;
       case 1:
         $("#calc-el").text("How much is " + tNumber + " - " + sNumber + "?");
         answer = tNumber - sNumber;
-        console.log(tNumber, sNumber, answer);
+        // console.log(tNumber, sNumber, answer);
         return answer;
         break;
       case 2:
         $("#calc-el").text("How much is " + fNumber + " * " + sNumber + "?");
         answer = fNumber * sNumber;
-        console.log(fNumber, sNumber, answer);
+        // console.log(fNumber, sNumber, answer);
         return answer;
         break;
       case 3:
@@ -114,7 +114,7 @@ function startGame() {
           "How much is " + "? " + " : " + divisorEl + " = " + resultEl
         );
         answer = divisorEl * resultEl;
-        console.log(divisorEl, resultEl, answer);
+        // console.log(divisorEl, resultEl, answer);
         return answer;
         break;
       case 4:
@@ -122,7 +122,7 @@ function startGame() {
           "How much is " + tNumber + " - " + fNumber + " + " + sNumber + "?"
         );
         answer = tNumber - fNumber + sNumber;
-        console.log(tNumber, fNumber, sNumber, answer);
+        // console.log(tNumber, fNumber, sNumber, answer);
         return answer;
         break;
       case 5:
@@ -130,7 +130,7 @@ function startGame() {
           "How much is " + fNumber + " + " + sNumber + " - " + tNumber + "?"
         );
         answer = fNumber + sNumber - tNumber;
-        console.log(fNumber, sNumber, tNumber, answer);
+        // console.log(fNumber, sNumber, tNumber, answer);
         return answer;
         break;
       case 6:
@@ -138,15 +138,15 @@ function startGame() {
           "How much is " + fNumber + " - " + tNumber + " + " + sNumber + "?"
         );
         answer = fNumber - tNumber + sNumber;
-        console.log(fNumber, tNumber, sNumber, answer);
+        // console.log(fNumber, tNumber, sNumber, answer);
         return answer;
         break;
       case 7 /* wurzelberechnung */ /* Return the value of the number 4 to the power of 3 (4*4*4): Math.pow(4, 3); = 64 */:
         $("#calc-el").text("What is the square root of " + 25 + " ?"); // without decimal places
         answer = Math.pow(25, 0.5);
-        console.log(25, answer);
+        // console.log(25, answer);
         return answer;
-        break;
+      // break;
       case 8 /* logarrhytmus */:
         /* 9. Aufgabe: Logarithmus eines Werts (Math.pow()) Per Zufall die Basis und das Ergebnis bestimmt.
             Eher kleine Werte nehmen, da sonst Potenz-Funktion sehr große Werte hat */
@@ -155,9 +155,9 @@ function startGame() {
         ); // without decimal places
         let roundNumber = Math.log10(fNumber);
         answer = Math.round((roundNumber + Number.EPSILON) * 100) / 100;
-        console.log(fNumber, roundNumber, answer);
+        // console.log(fNumber, roundNumber, answer);
         return answer;
-        break; // still round to 2 decimal places?
+      // break; // still round to 2 decimal places?
       default:
         $(".container2").hide();
         $("#scoreOfPlayer").hide();
